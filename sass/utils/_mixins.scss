@@ -1,0 +1,13 @@
+@mixin boxshadow {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@mixin gradientbutton {
+  color: $background;
+  background: linear-gradient(170deg, $secondary, $primary);
+  border: none;
+  border-radius: 25px;
+  padding: 1em 1.8em;
+  font-family: 'robotoregular';
+  font-size: 1em;
+}
