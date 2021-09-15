@@ -9,7 +9,20 @@ body {
     }
 }
 
+.main_body {
+  animation: lds-body 0.5s 600ms both;
+}
+
 /* Main Index */
+
+@-webkit-keyframes fullHeart {
+  0% {
+    background-size: 100% 0%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
 
 main {
   display: flex;
@@ -62,8 +75,7 @@ main {
         }
         #different_color_icon {
           color: $primary;
-        }
-      
+        }     
       }
   }
 
@@ -127,7 +139,25 @@ main {
         border: none;
         background-color: $background;
         font-size: 1.5em;
-      }
+        display: flex;
+        align-items: center;
+
+        .full-heart {
+          -webkit-background-clip: text;
+          color: transparent;
+          position: absolute; 
+
+          &:hover {
+            cursor: pointer;
+            background-image: -webkit-linear-gradient(170deg, $secondary, $primary);
+            background-size: 100% 100%;
+            background-position: bottom;
+            background-repeat: no-repeat;
+            -webkit-animation: fullHeart 0.4s linear;
+            animation: fullHeart 0.4s linear;
+          }         
+        }        
+      } 
     }
   }
 }
@@ -161,7 +191,30 @@ main {
     i {
       font-size: 1.4em;
     }
+    .main__restaurants--heartbutton {
+      border: none;
+      font-size: 1.3em;
+      display: flex;
+      align-items: center;
+
+      .full-heart {
+        -webkit-background-clip: text;
+        color: transparent;
+        position: absolute; 
+
+        &:hover {
+          cursor: pointer;
+          background-image: -webkit-linear-gradient(170deg, $secondary, $primary);
+          background-size: 100% 100%;
+          background-position: bottom;
+          background-repeat: no-repeat;
+          -webkit-animation: fullHeart 0.4s linear;
+          animation: fullHeart 0.4s linear;
+        }         
+      }        
+    } 
   }
+
   .main__principal {
     width: 40%;
     padding: 1.2em;
@@ -180,6 +233,11 @@ main {
       border-radius: 15px;
       @include boxshadow;
       animation: anim-opacity 1000ms both;
+      @for $i from 1 through $num-cards{
+        &:nth-child(#{$i}){
+          animation-delay: #{$anim-delay*$i};
+        }
+      }
       
       .main__principal--plat_price {
         width: 20%;
@@ -226,7 +284,6 @@ main {
           transition: all 500ms ease-in-out;
           transform: rotate(180deg)
         }
-
       }
 
       &:hover > .main__principal--anim {

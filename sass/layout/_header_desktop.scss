@@ -43,7 +43,12 @@ header {
  
        p {
          color: darken($background,60);
-         padding: 0 1em 1.5em 1em;
+         padding: 0 1em 3em 1em;
+       }
+
+       a {
+         color: $background;
+         text-decoration: none;
        }
          &--button { 
            @include gradientbutton;
