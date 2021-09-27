@@ -527,8 +527,16 @@ header .header__location {
   color: #404040;
   font-size: 1em;
 }
-header .header__location i {
-  margin-right: 1em;
+header .header__location input {
+  border: none;
+  background-color: #ebebeb;
+  font-family: "robotoregular";
+  font-weight: bold;
+  font-size: 1em;
+  color: #404040;
+  text-align: center;
+  width: 8em;
+  margin: 0;
 }
 header .header__description {
   width: 100%;
@@ -586,7 +594,7 @@ header .header__description--button {
 footer {
   background-color: #333333;
 }
-footer h1 {
+footer h4 {
   font-family: "shrikhandregular";
   color: #FFF;
   font-size: 1.5em;
@@ -872,6 +880,8 @@ footer .footer__nav li a {
     justify-content: space-between;
     font-size: 0.9em;
     margin: 0.8em;
+  }
+  .main__menu .main__principal .main__principal--plat .main__principal--plat_description p, .main__menu .main__principal .main__principal--plat .main__principal--plat_description h2 {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -949,8 +959,16 @@ footer .footer__nav li a {
     color: #404040;
     font-size: 1em;
   }
-  header .header__location i {
-    margin-right: 1em;
+  header .header__location input {
+    border: none;
+    background-color: #ebebeb;
+    font-family: "robotoregular";
+    font-weight: bold;
+    font-size: 1em;
+    color: #404040;
+    text-align: center;
+    width: 8em;
+    margin: 0;
   }
   header .header__description {
     background-color: #f7f7f7;
@@ -1008,10 +1026,10 @@ footer .footer__nav li a {
   footer {
     background-color: #333333;
   }
-  footer h1 {
+  footer h4 {
     font-family: "shrikhandregular";
     color: #FFF;
-    font-size: 0.4em;
+    font-size: 1.5em;
     padding: 1.2em 0 0.2em 1.2em;
   }
   footer .footer__nav {
@@ -1294,6 +1312,8 @@ footer .footer__nav li a {
     justify-content: space-between;
     font-size: 0.9em;
     margin: 0.8em;
+  }
+  .main__menu .main__principal .main__principal--plat .main__principal--plat_description p, .main__menu .main__principal .main__principal--plat .main__principal--plat_description h2 {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

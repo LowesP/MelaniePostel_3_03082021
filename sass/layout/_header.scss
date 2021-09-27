@@ -27,11 +27,19 @@ header {
      font-weight: bold;
      color: darken($background,75);
      font-size: 1em;
- 
-         i {
-           margin-right: 1em;
-           }
-     }
+
+      input {
+        border: none;
+        background-color: darken($background,8);
+        font-family: 'robotoregular';
+        font-weight: bold;
+        font-size: 1em;
+        color: darken($background,75);
+        text-align: center;
+        width: 8em;
+        margin: 0;
+      }
+    }       
  
    .header__description {
      background-color: darken($background,3);

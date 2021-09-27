@@ -235,7 +235,7 @@ main {
       animation: anim-opacity 1000ms both;
       @for $i from 1 through $num-cards{
         &:nth-child(#{$i}){
-          animation-delay: #{$anim-delay*$i};
+          animation-delay: #{$anim-delay*$i}; 
         }
       }
 
@@ -257,9 +257,11 @@ main {
         justify-content: space-between;
         font-size: 0.9em;
         margin: 0.8em;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+       p , h2{
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+       }
 
         h2 {
           font-weight: bold;
