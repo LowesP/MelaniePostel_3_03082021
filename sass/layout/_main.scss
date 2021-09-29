@@ -71,9 +71,14 @@ main {
         span {
           font-size: 1em;
         }
-        #different_color_icon {
+        
+        &:hover { 
+          background-color: #f5edff;
+        }
+
+        &:hover i {
           color: $primary;
-        }     
+        }
       }
   }
 
@@ -277,34 +282,38 @@ main {
         color: $background;
         align-self: stretch;
         text-align: center;
-        transition: all 500ms ease-in-out;
         border-radius: 0 15px 15px 0;
+        transition: width 500ms ease-in-out;
         
         i {
-          display: none;
           opacity: 0.8;
           transition: all 500ms ease-in-out;
-          transform: rotate(180deg)
         }
       }
 
-      &:hover > .main__principal--anim {
+      &:hover .main__principal--anim { 
         width: 60px;
       }
       &:hover > .main__principal--anim i {
-        display: block;
-        transform: rotate(0);
-        opacity: 1;
+        opacity: 1;       
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
       }
     }
       .button__command {
         display: flex;
         justify-content: center;
+
         button {
           @include gradientbutton;
           @include boxshadow;
           margin: 2em 1em;
           padding: 0.8em 3em;
+
+          &:hover {
+            opacity: 0.9;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);        
+          }
         } 
       }
   }

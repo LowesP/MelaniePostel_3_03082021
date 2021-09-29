@@ -243,6 +243,7 @@ main .main__fonctionnement li {
   border-radius: 20px;
   font-weight: bold;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 main .main__fonctionnement li .number {
   background-color: #9356DC;
@@ -262,7 +263,10 @@ main .main__fonctionnement li i {
 main .main__fonctionnement li span {
   font-size: 1em;
 }
-main .main__fonctionnement li #different_color_icon {
+main .main__fonctionnement li:hover {
+  background-color: #f5edff;
+}
+main .main__fonctionnement li:hover i {
   color: #9356DC;
 }
 main .main__restaurants {
@@ -401,6 +405,7 @@ main .main__restaurants .main__restaurants__card .main__restaurants--heartbutton
   background-color: #FFF;
   margin: 1em 0;
   border-radius: 15px;
+  overflow: hidden;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   animation: anim-opacity 1000ms both;
 }
@@ -467,22 +472,20 @@ main .main__restaurants .main__restaurants__card .main__restaurants--heartbutton
   color: #FFF;
   align-self: stretch;
   text-align: center;
-  transition: all 500ms ease-in-out;
   border-radius: 0 15px 15px 0;
+  transition: width 500ms ease-in-out;
 }
 .main__menu .main__principal .main__principal--plat .main__principal--anim i {
-  display: none;
   opacity: 0.8;
   transition: all 500ms ease-in-out;
-  transform: rotate(180deg);
 }
-.main__menu .main__principal .main__principal--plat:hover > .main__principal--anim {
+.main__menu .main__principal .main__principal--plat:hover .main__principal--anim {
   width: 60px;
 }
 .main__menu .main__principal .main__principal--plat:hover > .main__principal--anim i {
-  display: block;
-  transform: rotate(0);
   opacity: 1;
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
 }
 .main__menu .main__principal .button__command {
   display: flex;
@@ -499,6 +502,11 @@ main .main__restaurants .main__restaurants__card .main__restaurants--heartbutton
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   margin: 2em 1em;
   padding: 0.8em 3em;
+  cursor: pointer;
+}
+.main__menu .main__principal .button__command button:hover {
+  opacity: 0.9;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
 }
 
 /* Header Index */
@@ -564,6 +572,10 @@ header .header__description--button {
   font-family: "robotoregular";
   font-size: 1em;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+header .header__description--button:hover {
+  opacity: 0.9;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
 }
 
 /* Header Menus */
@@ -691,7 +703,10 @@ footer .footer__nav li a {
   main .main__fonctionnement li span {
     font-size: 1em;
   }
-  main .main__fonctionnement li #different_color_icon {
+  main .main__fonctionnement li:hover {
+    background-color: #f5edff;
+  }
+  main .main__fonctionnement li:hover i {
     color: #9356DC;
   }
   main .main__restaurants {
@@ -898,22 +913,20 @@ footer .footer__nav li a {
     color: #FFF;
     align-self: stretch;
     text-align: center;
-    transition: all 500ms ease-in-out;
     border-radius: 0 15px 15px 0;
+    transition: width 500ms ease-in-out;
   }
   .main__menu .main__principal .main__principal--plat .main__principal--anim i {
-    display: none;
     opacity: 0.8;
     transition: all 500ms ease-in-out;
-    transform: rotate(180deg);
   }
-  .main__menu .main__principal .main__principal--plat:hover > .main__principal--anim {
+  .main__menu .main__principal .main__principal--plat:hover .main__principal--anim {
     width: 60px;
   }
   .main__menu .main__principal .main__principal--plat:hover > .main__principal--anim i {
-    display: block;
-    transform: rotate(0);
     opacity: 1;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
   }
   .main__menu .main__principal .button__command {
     display: flex;
@@ -930,6 +943,10 @@ footer .footer__nav li a {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     margin: 2em 1em;
     padding: 0.8em 3em;
+  }
+  .main__menu .main__principal .button__command button:hover {
+    opacity: 0.9;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
   }
 }
 @media screen and (max-width: 425px) {
@@ -996,6 +1013,10 @@ footer .footer__nav li a {
     font-size: 1em;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   }
+  header .header__description--button:hover {
+    opacity: 0.9;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+  }
 
   /* Header Menus */
   .header__menu .header__menu--logo {
@@ -1013,7 +1034,7 @@ footer .footer__nav li a {
   .header__menu .header__menu--logo img {
     width: 10em;
     height: auto;
-    margin-left: 4em;
+    margin-left: 5.5em;
   }
   .header__menu img {
     max-width: 100%;
@@ -1123,7 +1144,10 @@ footer .footer__nav li a {
   main .main__fonctionnement li span {
     font-size: 1em;
   }
-  main .main__fonctionnement li #different_color_icon {
+  main .main__fonctionnement li:hover {
+    background-color: #f5edff;
+  }
+  main .main__fonctionnement li:hover i {
     color: #9356DC;
   }
   main .main__restaurants {
@@ -1330,22 +1354,20 @@ footer .footer__nav li a {
     color: #FFF;
     align-self: stretch;
     text-align: center;
-    transition: all 500ms ease-in-out;
     border-radius: 0 15px 15px 0;
+    transition: width 500ms ease-in-out;
   }
   .main__menu .main__principal .main__principal--plat .main__principal--anim i {
-    display: none;
     opacity: 0.8;
     transition: all 500ms ease-in-out;
-    transform: rotate(180deg);
   }
-  .main__menu .main__principal .main__principal--plat:hover > .main__principal--anim {
+  .main__menu .main__principal .main__principal--plat:hover .main__principal--anim {
     width: 60px;
   }
   .main__menu .main__principal .main__principal--plat:hover > .main__principal--anim i {
-    display: block;
-    transform: rotate(0);
     opacity: 1;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
   }
   .main__menu .main__principal .button__command {
     display: flex;
@@ -1362,6 +1384,10 @@ footer .footer__nav li a {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     margin: 2em 1em;
     padding: 0.8em 3em;
+  }
+  .main__menu .main__principal .button__command button:hover {
+    opacity: 0.9;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
   }
 }
 
