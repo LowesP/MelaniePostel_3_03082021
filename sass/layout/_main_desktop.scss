@@ -15,6 +15,15 @@ body {
 
 /* Main Index */
 
+@keyframes fullHeart {
+  0% {
+    background-size: 100% 0%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
 @-webkit-keyframes fullHeart {
   0% {
     background-size: 100% 0%;
@@ -150,6 +159,7 @@ main {
         align-items: center;
 
         .full-heart {
+          background-clip: text;
           -webkit-background-clip: text;
           color: transparent;
           position: absolute; 
@@ -205,6 +215,7 @@ main {
       align-items: center;
 
       .full-heart {
+        background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
         position: absolute; 
