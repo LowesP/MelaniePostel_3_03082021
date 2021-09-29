@@ -58,15 +58,15 @@ header {
          color: $background;
          text-decoration: none;
        }
-         &--button { 
-           @include gradientbutton;
-           @include boxshadow;
+        &--button { 
+          @include gradientbutton;
+          @include boxshadow;
 
-           &:hover {
+          &:hover {
             opacity: 0.9;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);        
            }
-         }
+        }
      }
  }
 
